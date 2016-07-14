@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "develop": "node -r dotenv/config app.js"
+  },
+  "devDependencies": {
+    "dotenv": "^2.0.0"
+  }
+}

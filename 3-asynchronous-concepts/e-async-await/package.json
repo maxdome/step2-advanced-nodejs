@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "develop": "npm run transpile && node dest/app.js",
+    "transpile": "babel src -d dest"
+  },
+  "dependencies": {
+    "babel-cli": "^6.7.5",
+    "babel-plugin-transform-async-to-generator": "^6.8.0"
+  }
+}
