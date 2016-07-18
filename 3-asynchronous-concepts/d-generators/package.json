@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "develop": "node app.js"
+  },
   "dependencies": {
     "co": "^4.6.0"
   }

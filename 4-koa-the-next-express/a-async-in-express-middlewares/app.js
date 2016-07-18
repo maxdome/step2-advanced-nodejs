@@ -36,4 +36,7 @@ app.get('/async', (req, res) => {
 
 
 
-app.listen(process.env.PORT);
+app.get('/', (req, res) => {
+  res.send('<a href="/sync">/sync</a><br/><a href="/async">/async</a>');
+});
+app.listen(process.env.PORT || 3000);

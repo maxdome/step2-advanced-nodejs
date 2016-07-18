@@ -1,8 +1,5 @@
 {
   "scripts": {
     "develop": "node app.js"
-  },
-  "dependencies": {
-    "async": "^2.0.0-rc.6"
   }
 }

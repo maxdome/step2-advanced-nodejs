@@ -3,7 +3,9 @@
     "none": "node app.js",
     "args": "PORT=80 MXD_EXAMPLE=MXD node app.js",
     "file": "node -r dotenv/config app.js",
-    "mixed": "MXD_EXAMPLE=MXD node -r dotenv/config app.js"
+    "mixed": "MXD_EXAMPLE=MXD node -r dotenv/config app.js",
+
+    "develop": "node -r dotenv/config app.js"
   },
   "devDependencies": {
     "dotenv": "^2.0.0"

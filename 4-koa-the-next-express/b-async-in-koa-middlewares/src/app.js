@@ -9,6 +9,7 @@ const router = new KoaRouter();
 router.use('/sync', async (ctx, next) => {
   console.log('a');
   await next();
+  ctx.body = 'changed ' + ctx.body;
   console.log('d');
 });
 
@@ -23,6 +24,7 @@ router.get('/sync', async (ctx) => {
 router.use('/async', async (ctx, next) => {
   console.log('a');
   await next();
+  ctx.body = 'changed ' + ctx.body;
   console.log('e');
 });
 
@@ -39,8 +41,10 @@ router.get('/async', async (ctx) => {
 });
 
 
-
+router.get('/', async (ctx) => {
+  ctx.body = '<a href="/sync">/sync</a><br/><a href="/async">/async</a>';
+});
 app
   .use(router.routes())
   .use(router.allowedMethods());
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 3000);
